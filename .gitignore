@@ -1,0 +1,23 @@
+# Vivado generated directories
+.Xil/
+*.cache/
+*.gen/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+
+# Vivado logs, journals, and crash files
+*.jou
+*.log
+*.str
+*.pb
+hs_err_pid*
+dfx_runtime.txt
+archive_project_summary.txt
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+*~
+*.swp
