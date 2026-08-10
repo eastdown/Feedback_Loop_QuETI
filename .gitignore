@@ -21,3 +21,10 @@ archive_project_summary.txt
 Thumbs.db
 *~
 *.swp
+
+# Python generated files
+__pycache__/
+*.py[cod]
+
+# Local verification work directories
+tmp/

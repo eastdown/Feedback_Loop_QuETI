@@ -1,0 +1,80 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Fri Aug  7 16:16:38 2026
+| Host         : QuETI-i7-3070A running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -file D:/Laser_Intensity_Lock/RF_Power_Lock_ADC_BUILD/reports/utilization_hierarchical.rpt
+| Design       : design_1_wrapper
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++--------------------------------------------------+--------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+|                     Instance                     |                               Module                               | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++--------------------------------------------------+--------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+| design_1_wrapper                                 |                                                              (top) |       1871 |       1869 |       0 |    2 | 2366 |      0 |      0 |          8 |
+|   (design_1_wrapper)                             |                                                              (top) |          0 |          0 |       0 |    0 |    0 |      0 |      0 |          0 |
+|   design_1_i                                     |                                                           design_1 |       1871 |       1869 |       0 |    2 | 2366 |      0 |      0 |          8 |
+|     offset_scale_ctrl_1                          |                                     design_1_offset_scale_ctrl_1_0 |        133 |        133 |       0 |    0 |   88 |      0 |      0 |          2 |
+|       inst                                       |                   design_1_offset_scale_ctrl_1_0_offset_scale_ctrl |        133 |        133 |       0 |    0 |   88 |      0 |      0 |          2 |
+|     axi_gpio_0                                   |                                              design_1_axi_gpio_0_0 |         49 |         49 |       0 |    0 |  128 |      0 |      0 |          0 |
+|       U0                                         |                                     design_1_axi_gpio_0_0_axi_gpio |         49 |         49 |       0 |    0 |  128 |      0 |      0 |          0 |
+|         gpio_core_1                              |                                    design_1_axi_gpio_0_0_GPIO_Core |          2 |          2 |       0 |    0 |   66 |      0 |      0 |          0 |
+|     axi_gpio_1                                   |                                              design_1_axi_gpio_1_0 |         49 |         49 |       0 |    0 |  128 |      0 |      0 |          0 |
+|       U0                                         |                                     design_1_axi_gpio_1_0_axi_gpio |         49 |         49 |       0 |    0 |  128 |      0 |      0 |          0 |
+|         gpio_core_1                              |                                    design_1_axi_gpio_1_0_GPIO_Core |          2 |          2 |       0 |    0 |   66 |      0 |      0 |          0 |
+|     axi_gpio_2                                   |                                              design_1_axi_gpio_2_0 |         49 |         49 |       0 |    0 |  128 |      0 |      0 |          0 |
+|       U0                                         |                                     design_1_axi_gpio_2_0_axi_gpio |         49 |         49 |       0 |    0 |  128 |      0 |      0 |          0 |
+|         gpio_core_1                              |                                    design_1_axi_gpio_2_0_GPIO_Core |          2 |          2 |       0 |    0 |   66 |      0 |      0 |          0 |
+|     axi_gpio_3                                   |                                              design_1_axi_gpio_3_0 |         49 |         49 |       0 |    0 |  128 |      0 |      0 |          0 |
+|       U0                                         |                                     design_1_axi_gpio_3_0_axi_gpio |         49 |         49 |       0 |    0 |  128 |      0 |      0 |          0 |
+|         gpio_core_1                              |                                    design_1_axi_gpio_3_0_GPIO_Core |          2 |          2 |       0 |    0 |   66 |      0 |      0 |          0 |
+|     axi_gpio_4                                   |                                              design_1_axi_gpio_4_0 |         49 |         49 |       0 |    0 |  128 |      0 |      0 |          0 |
+|       U0                                         |                                     design_1_axi_gpio_4_0_axi_gpio |         49 |         49 |       0 |    0 |  128 |      0 |      0 |          0 |
+|         gpio_core_1                              |                                    design_1_axi_gpio_4_0_GPIO_Core |          2 |          2 |       0 |    0 |   66 |      0 |      0 |          0 |
+|     axi_gpio_5                                   |                                              design_1_axi_gpio_5_0 |         49 |         49 |       0 |    0 |  128 |      0 |      0 |          0 |
+|       U0                                         |                                     design_1_axi_gpio_5_0_axi_gpio |         49 |         49 |       0 |    0 |  128 |      0 |      0 |          0 |
+|         gpio_core_1                              |                                    design_1_axi_gpio_5_0_GPIO_Core |          2 |          2 |       0 |    0 |   66 |      0 |      0 |          0 |
+|     axi_gpio_6                                   |                                              design_1_axi_gpio_6_0 |         49 |         49 |       0 |    0 |  128 |      0 |      0 |          0 |
+|       U0                                         |                                     design_1_axi_gpio_6_0_axi_gpio |         49 |         49 |       0 |    0 |  128 |      0 |      0 |          0 |
+|         gpio_core_1                              |                                    design_1_axi_gpio_6_0_GPIO_Core |          2 |          2 |       0 |    0 |   66 |      0 |      0 |          0 |
+|     axi_gpio_7                                   |                                              design_1_axi_gpio_7_0 |         49 |         49 |       0 |    0 |  128 |      0 |      0 |          0 |
+|       U0                                         |                                     design_1_axi_gpio_7_0_axi_gpio |         49 |         49 |       0 |    0 |  128 |      0 |      0 |          0 |
+|         gpio_core_1                              |                                    design_1_axi_gpio_7_0_GPIO_Core |          2 |          2 |       0 |    0 |   66 |      0 |      0 |          0 |
+|     axi_smc                                      |                                                 design_1_axi_smc_1 |        994 |        993 |       0 |    1 | 1001 |      0 |      0 |          0 |
+|       inst                                       |                                         design_1_axi_smc_1_bd_6f02 |        994 |        993 |       0 |    1 | 1001 |      0 |      0 |          0 |
+|         s00_entry_pipeline                       |                  design_1_axi_smc_1_s00_entry_pipeline_imp_1PSXOAM |        422 |        422 |       0 |    0 |  444 |      0 |      0 |          0 |
+|           s00_mmu                                |                                design_1_axi_smc_1_bd_6f02_s00mmu_0 |        194 |        194 |       0 |    0 |  238 |      0 |      0 |          0 |
+|             inst                                 |                              design_1_axi_smc_1_sc_mmu_v1_0_16_top |        194 |        194 |       0 |    0 |  238 |      0 |      0 |          0 |
+|               gen_endpoint.decerr_slave_inst     |                     design_1_axi_smc_1_sc_mmu_v1_0_16_decerr_slave |         58 |         58 |       0 |    0 |   41 |      0 |      0 |          0 |
+|               ar_reg_stall                       |    design_1_axi_smc_1_sc_util_v1_0_4_axi_reg_stall__parameterized0 |         54 |         54 |       0 |    0 |   84 |      0 |      0 |          0 |
+|               aw_reg_stall                       | design_1_axi_smc_1_sc_util_v1_0_4_axi_reg_stall__parameterized0_24 |         49 |         49 |       0 |    0 |   84 |      0 |      0 |          0 |
+|           s00_si_converter                       |                                design_1_axi_smc_1_bd_6f02_s00sic_0 |        220 |        220 |       0 |    0 |  174 |      0 |      0 |          0 |
+|             inst                                 |                     design_1_axi_smc_1_sc_si_converter_v1_0_16_top |        220 |        220 |       0 |    0 |  174 |      0 |      0 |          0 |
+|               gen_axilite_conv.axilite_conv_inst |            design_1_axi_smc_1_sc_si_converter_v1_0_16_axilite_conv |        218 |        218 |       0 |    0 |  170 |      0 |      0 |          0 |
+|         switchboards                             |                        design_1_axi_smc_1_switchboards_imp_18NKQB4 |        269 |        269 |       0 |    0 |  214 |      0 |      0 |          0 |
+|           i_nodes                                |                              design_1_axi_smc_1_i_nodes_imp_RZ93WO |        202 |        202 |       0 |    0 |  214 |      0 |      0 |          0 |
+|             i_b_node                             |                                   design_1_axi_smc_1_bd_6f02_bni_0 |         75 |         75 |       0 |    0 |   54 |      0 |      0 |          0 |
+|               inst                               |            design_1_axi_smc_1_sc_node_v1_0_19_top__parameterized11 |         75 |         75 |       0 |    0 |   54 |      0 |      0 |          0 |
+|                 inst_si_handler                  |      design_1_axi_smc_1_sc_node_v1_0_19_si_handler__parameterized6 |         56 |         56 |       0 |    0 |   41 |      0 |      0 |          0 |
+|             i_r_node                             |                                   design_1_axi_smc_1_bd_6f02_rni_0 |         74 |         74 |       0 |    0 |   84 |      0 |      0 |          0 |
+|               inst                               |            design_1_axi_smc_1_sc_node_v1_0_19_top__parameterized12 |         74 |         74 |       0 |    0 |   84 |      0 |      0 |          0 |
+|                 inst_si_handler                  |      design_1_axi_smc_1_sc_node_v1_0_19_si_handler__parameterized7 |         56 |         56 |       0 |    0 |   41 |      0 |      0 |          0 |
+|           r_la_out_swbd                          |                                design_1_axi_smc_1_bd_6f02_routsw_0 |         67 |         67 |       0 |    0 |    0 |      0 |      0 |          0 |
+|             inst                                 |       design_1_axi_smc_1_sc_switchboard_v1_0_9_top__parameterized4 |         67 |         67 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     offset_scale_ctrl_0                          |                                     design_1_offset_scale_ctrl_0_0 |        133 |        133 |       0 |    0 |   88 |      0 |      0 |          2 |
+|       inst                                       |                   design_1_offset_scale_ctrl_0_0_offset_scale_ctrl |        133 |        133 |       0 |    0 |   88 |      0 |      0 |          2 |
++--------------------------------------------------+--------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

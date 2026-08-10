@@ -1,0 +1,23 @@
+[Unit]
+Description=PYNQ RF Power Lock FPGA loader
+After=jupyter.service
+Requires=jupyter.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/xilinx/jupyter_notebooks/RF_Power_Lock
+Environment=XILINX_XRT=/usr
+Environment=BOARD=Pynq-Redpitaya-125-14
+Environment=VIRTUAL_ENV=/usr/local/share/pynq-venv
+Environment=PYNQ_PYTHON=python3.10
+Environment=PYNQ_JUPYTER_NOTEBOOKS=/home/xilinx/jupyter_notebooks
+Environment=PATH=/opt/sigrok/bin:/usr/local/share/pynq-venv/bin:/opt/microblazeel-xilinx-elf/bin:/opt/python3.10/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=/usr/local/share/pynq-venv/bin/python3 /home/xilinx/jupyter_notebooks/RF_Power_Lock/_system/rf_power_lock_service.py
+Restart=always
+RestartSec=2
+StandardOutput=append:/var/log/rf-power-lock.log
+StandardError=append:/var/log/rf-power-lock.log
+
+[Install]
+WantedBy=multi-user.target
