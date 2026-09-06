@@ -6,7 +6,7 @@
 
 ## 1. 가장 중요한 현재 상태
 
-- Red Pitaya 주소: `10.0.133.45`
+- Red Pitaya 주소: 랩 내부 네트워크 주소 (공개 문서에는 기록하지 않음. 실제 주소는 랩에서 확인)
 - 장치: Red Pitaya STEMlab 125-14 Original Generation
 - FPGA bitstream은 이미 제작·검증·배포되어 있다. 당분간 Vivado 수정은 계획하지 않는다.
 - 현재 FPGA는 **TTL 입력을 사용하지 않는 항상 활성화 구조**다.
@@ -365,18 +365,13 @@ SHA-256: 6d5aa39c2e008c2238525d1be96a017ee732509fbeb9c03f312ab0fc2252f3ec
 ### 10.1 네트워크
 
 ```text
-Board IP: 10.0.133.45
+Board IP: <BOARD_IP>
 SSH user: xilinx
-Jupyter: http://10.0.133.45
+Jupyter: http://<BOARD_IP>
 ```
 
-로그인 password는 이 문서에 저장하지 않는다. 사용자에게 별도로 확인한다. 다른 PC를 direct Ethernet으로 연결할 때는 PC NIC를 `10.0.133.x/24`의 겹치지 않는 주소로 설정한다.
+로그인 password는 이 문서에 저장하지 않는다. 사용자에게 별도로 확인한다. 다른 PC를 direct Ethernet으로 연결할 때는 PC NIC를 보드와 같은 /24 서브넷 안의 겹치지 않는 주소로 설정한다.
 
-확인된 SSH host key fingerprint:
-
-```text
-ssh-ed25519 SHA256:c+9OzOS/pf1f22xHN89icl7yuaX8D9sdjnufONRaYIU
-```
 
 ### 10.2 Red Pitaya 폴더
 
