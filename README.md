@@ -17,23 +17,13 @@ Closed loop, TTL-gated, `Kp = -12`, `Ki = -20/8192`:
 | Measured step at detector | 22.6 mV |
 | Residual setpoint offset | 17 mV |
 
-<!-- ![Closed-loop step response](docs/closed-loop-step.png) -->
+![Closed-loop step response](docs/closed-loop-step.png)
 
 The speed limit is the ~1 µs of transport delay around VVA → RF path → power detector, not the controller. At `Kp = -30` the loop rings at ~160 kHz before settling: the control voltage moves first, the detector answers roughly 1 µs later, and by then the controller has already overshot the correction it needed.
 
 ## Signal chain
 
-```mermaid
-flowchart LR
-  SRC["RF source<br/>+10 dBm"] --> VVA["VVA<br/>ZX73-2500+"]
-  VVA --> PD["Power detector<br/>ZX47-40LN-S+"]
-  PD --> DIV["604 / 402 Ω<br/>divider"]
-  DIV --> IN1["Red Pitaya IN1"]
-  IN1 --> FPGA["FPGA PI controller<br/>125 MHz"]
-  FPGA --> OUT1["Red Pitaya OUT1<br/>±1 V"]
-  OUT1 --> SUM["Summing amp<br/>+3 V shift"]
-  SUM --> VVA
-```
+![Signal chain](docs/signal-chain.png)
 
 RF power up → detector voltage down → controller raises attenuation → RF power back to setpoint. The summing amplifier maps the Red Pitaya's ±1 V output onto the VVA's 2–4 V control range.
 
@@ -51,7 +41,7 @@ RF power up → detector voltage down → controller raises attenuation → RF p
 
 Four clock cycles (32 ns) from input capture to output edge.
 
-<!-- ![Vivado block design](docs/block-design.png) -->
+![Vivado block design](docs/block-design.png)
 
 An earlier version did the subtraction, multiply, scaling, saturation and addition inside a single cycle and failed timing at **WNS −6.881 ns with 188 setup violations**. Repartitioning into the pipeline above closes at **WNS +1.213 ns, WHS +0.048 ns**.
 
@@ -83,7 +73,7 @@ Measured before closing the loop, since these set the achievable loop bandwidth:
 | | 90–10% fall | 709 ns |
 | VVA ZX73-2500+ | 90–10% fall, 8 Vpp control | 1.57 µs |
 
-<!-- ![Power detector rise fit](docs/pd-rise-fit.png) -->
+![Power detector rise fit](docs/pd-rise-fit.png)
 
 Rise and fall times are exponential fits (`scipy.optimize.curve_fit`) to median-filtered scope traces rather than cursor readings.
 
