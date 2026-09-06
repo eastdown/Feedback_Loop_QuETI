@@ -59,7 +59,7 @@ https://github.com/RedPitaya/RedPitaya-FPGA/blob/master/sdc/red_pitaya.xdc
 
 ## Red Pitaya 자동실행
 
-2026-07-29에 보드 `10.0.133.45`의 다음 경로로 배포했습니다.
+2026-07-29에 보드의 다음 경로로 배포했습니다.
 
 ```text
 /home/xilinx/jupyter_notebooks/RF_Power_Lock/
